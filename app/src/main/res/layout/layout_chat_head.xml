@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- this is the collapsed layout -->
+        <RelativeLayout
+            android:id="@+id/collapsedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/message01" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/close" />
+            <!--            <com.nex3z.notificationbadge.NotificationBadge-->
+            <!--                android:id="@+id/count"-->
+            <!--                android:layout_width="28dp"-->
+            <!--                android:layout_height="28dp"-->
+            <!--                app:nbMaxTextLength="2"-->
+            <!--                app:nbBackground="@drawable/bg_with_shadow"/>-->
+        </RelativeLayout>
+
+        <!-- this is the expanded layout -->
+        <LinearLayout
+            android:id="@+id/expandedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="420dp"
+            android:layout_marginRight="20dp"
+            android:background="#a0c3d7"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:weightSum="3.5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:padding="5dp"
+                android:src="@drawable/bubble_img"
+                tools:ignore="ContentDescription" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bariol_regular"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Make your own pack"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/bariol_regular"
+                    android:text="Mix and make a data packs that's suited just for you"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circle_button"
+                    android:fontFamily="@font/bariol_regular"
+                    android:padding="5dp"
+                    android:text="go to datamixer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"></Button>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circle_button2"
+                    android:fontFamily="@font/bariol_regular"
+                    android:text="remind me later"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"></Button>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
